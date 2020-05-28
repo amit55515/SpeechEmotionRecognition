@@ -40,7 +40,10 @@ from keras.layers import Dropout
 model = Sequential()
 
 # Adding the first LSTM layer and some Dropout regularisation
-model.add(LSTM(units = 50, return_sequences = True, input_shape = (X_train.shape[0], 1)))
+print(X_train.shape)
+X_train = X_train.reshape(1,X_train.shape[0],X_train.shape[1])
+print(X_train.shape)
+model.add(LSTM(units = 50, return_sequences = True, input_shape = (X_train)))
 model.add(Dropout(0.2))
 
 # Adding a second LSTM layer and some Dropout regularisation

@@ -70,7 +70,7 @@ def load_data(test_size=0.25):
     X, y = [], []
     for file in glob.glob("data1/Actor_*/*.wav"):
         # get the base name of the audio file
-        print(file)
+        # print(file)
         basename = os.path.basename(file)
         # get the emotion label
         emotion = int2emotion[basename.split("-")[2]]
