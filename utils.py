@@ -84,5 +84,3 @@ def load_data(test_size=0.25):
         y.append(emotion)
     # split the data to training and testing and return it
     return train_test_split(np.array(X), y, test_size=test_size, random_state=7)
-
-# load_data()
