@@ -130,7 +130,7 @@ if __name__ == "__main__":
     # record the file (start talking)
     record_to_file(filename)
     # extract features and reshape it
-    features = extract_feature(filename, mfcc=True, chroma=True, mel=True).reshape(1, -1)
+    features = extract_feature(filename, mfcc=True, chroma=True, mel=True,contrast= True, tonnetz= True).reshape(1, -1)
     # predict
     result = model.predict(features)[0]
     # show the result !
